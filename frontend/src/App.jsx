@@ -5,16 +5,15 @@ import { Todos } from "./components/Todos"
 function App() {
 
   const [todos, setTodos] = useState([])
-  fetch("http://localhost:3000/todos").then(async function (res){
-    const json = await res.json();
+  fetch("http://localhost:3000/todos").then(async function (res) {
+    const json = await res.json;
     console.log(json.todos);
-    setTodos(json.todos)
+    //setTodos(json.todos)
   })
   return (
     <>
       <div>
-        <CreateTodo></CreateTodo>
-        <Todos todos={todos}></Todos>
+        HI
       </div>
     </>
   )
